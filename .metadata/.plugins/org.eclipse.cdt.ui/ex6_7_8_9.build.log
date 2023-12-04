@@ -1,0 +1,26 @@
+20:05:17 **** Incremental Build of configuration Debug for project ex6_7_8_9 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:155:8: warning: 'clearNumberOnClock' defined but not used [-Wunused-function]
+  155 |   void clearNumberOnClock(int num)
+      |        ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ex6_7_8_9.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Ron\tools\STM32 workspace\ex6_7_8_9\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ex6_7_8_9.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ex6_7_8_9.elf
+ 
+arm-none-eabi-size   ex6_7_8_9.elf 
+arm-none-eabi-objdump -h -S  ex6_7_8_9.elf  > "ex6_7_8_9.list"
+arm-none-eabi-objcopy  -O ihex  ex6_7_8_9.elf  "ex6_7_8_9.hex"
+   text	   data	    bss	    dec	    hex	filename
+   4968	     20	   1572	   6560	   19a0	ex6_7_8_9.elf
+arm-none-eabi-objcopy  -O binary  ex6_7_8_9.elf  "ex6_7_8_9.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ex6_7_8_9.hex
+Finished building: ex6_7_8_9.bin
+ 
+Finished building: ex6_7_8_9.list
+ 
+ 
+
+20:05:18 Build Finished. 0 errors, 1 warnings. (took 627ms)
+

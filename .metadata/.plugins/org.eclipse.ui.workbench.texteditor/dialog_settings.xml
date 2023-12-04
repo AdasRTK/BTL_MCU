@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="652"/>
+		<item key="DIALOG_Y_ORIGIN" value="387"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="company_t"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="company_t"/>
+			<item value="KeyReg"/>
+			<item value="vertical"/>
+			<item value="horizontal"/>
+			<item value="HORI"/>
+			<item value="VERTI"/>
+			<item value="num"/>
+			<item value="LEDg"/>
+			<item value="LEDf"/>
+			<item value="LEDe"/>
+			<item value="LEDd"/>
+			<item value="LEDc"/>
+			<item value="LEDb"/>
+			<item value="LEDa"/>
+			<item value="LEGa"/>
+		</list>
+		<list key="replacehistory">
+			<item value="KeyState"/>
+			<item value="v"/>
+			<item value="h"/>
+			<item value="H"/>
+			<item value="V"/>
+			<item value="SEG6"/>
+			<item value="SEG5"/>
+			<item value="SEG4"/>
+			<item value="SEG3"/>
+			<item value="SEG2"/>
+			<item value="SEG1"/>
+			<item value="SEG0"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1177"/>
+		<item key="DIALOG_Y_ORIGIN" value="204"/>
+		<item key="DIALOG_WIDTH" value="336"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

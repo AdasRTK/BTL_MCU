@@ -1,0 +1,99 @@
+01:29:14 **** Incremental Build of configuration Debug for project Lab3 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+In file included from ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:128,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:237,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Inc/button.h:7,
+                 from ../Core/Src/button.c:1:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:650:29: warning: initialization of 'int' from 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} makes integer from pointer without a cast [-Wint-conversion]
+  650 | #define GPIOA               ((GPIO_TypeDef *)GPIOA_BASE)
+      |                             ^
+../Core/Inc/main.h:88:27: note: in expansion of macro 'GPIOA'
+   88 | #define BUTTON1_GPIO_Port GPIOA
+      |                           ^~~~~
+../Core/Src/button.c:12:27: note: in expansion of macro 'BUTTON1_GPIO_Port'
+   12 | int button_ports[4] = {0, BUTTON1_GPIO_Port, BUTTON2_GPIO_Port, BUTTON3_GPIO_Port};
+      |                           ^~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:650:29: note: (near initialization for 'button_ports[1]')
+  650 | #define GPIOA               ((GPIO_TypeDef *)GPIOA_BASE)
+      |                             ^
+../Core/Inc/main.h:88:27: note: in expansion of macro 'GPIOA'
+   88 | #define BUTTON1_GPIO_Port GPIOA
+      |                           ^~~~~
+../Core/Src/button.c:12:27: note: in expansion of macro 'BUTTON1_GPIO_Port'
+   12 | int button_ports[4] = {0, BUTTON1_GPIO_Port, BUTTON2_GPIO_Port, BUTTON3_GPIO_Port};
+      |                           ^~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:650:29: warning: initialization of 'int' from 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} makes integer from pointer without a cast [-Wint-conversion]
+  650 | #define GPIOA               ((GPIO_TypeDef *)GPIOA_BASE)
+      |                             ^
+../Core/Inc/main.h:90:27: note: in expansion of macro 'GPIOA'
+   90 | #define BUTTON2_GPIO_Port GPIOA
+      |                           ^~~~~
+../Core/Src/button.c:12:46: note: in expansion of macro 'BUTTON2_GPIO_Port'
+   12 | int button_ports[4] = {0, BUTTON1_GPIO_Port, BUTTON2_GPIO_Port, BUTTON3_GPIO_Port};
+      |                                              ^~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:650:29: note: (near initialization for 'button_ports[2]')
+  650 | #define GPIOA               ((GPIO_TypeDef *)GPIOA_BASE)
+      |                             ^
+../Core/Inc/main.h:90:27: note: in expansion of macro 'GPIOA'
+   90 | #define BUTTON2_GPIO_Port GPIOA
+      |                           ^~~~~
+../Core/Src/button.c:12:46: note: in expansion of macro 'BUTTON2_GPIO_Port'
+   12 | int button_ports[4] = {0, BUTTON1_GPIO_Port, BUTTON2_GPIO_Port, BUTTON3_GPIO_Port};
+      |                                              ^~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:650:29: warning: initialization of 'int' from 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} makes integer from pointer without a cast [-Wint-conversion]
+  650 | #define GPIOA               ((GPIO_TypeDef *)GPIOA_BASE)
+      |                             ^
+../Core/Inc/main.h:92:27: note: in expansion of macro 'GPIOA'
+   92 | #define BUTTON3_GPIO_Port GPIOA
+      |                           ^~~~~
+../Core/Src/button.c:12:65: note: in expansion of macro 'BUTTON3_GPIO_Port'
+   12 | int button_ports[4] = {0, BUTTON1_GPIO_Port, BUTTON2_GPIO_Port, BUTTON3_GPIO_Port};
+      |                                                                 ^~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h:650:29: note: (near initialization for 'button_ports[3]')
+  650 | #define GPIOA               ((GPIO_TypeDef *)GPIOA_BASE)
+      |                             ^
+../Core/Inc/main.h:92:27: note: in expansion of macro 'GPIOA'
+   92 | #define BUTTON3_GPIO_Port GPIOA
+      |                           ^~~~~
+../Core/Src/button.c:12:65: note: in expansion of macro 'BUTTON3_GPIO_Port'
+   12 | int button_ports[4] = {0, BUTTON1_GPIO_Port, BUTTON2_GPIO_Port, BUTTON3_GPIO_Port};
+      |                                                                 ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'getKeyInput':
+../Core/Src/button.c:28:48: warning: passing argument 1 of 'HAL_GPIO_ReadPin' makes pointer from integer without a cast [-Wint-conversion]
+   28 |  KeyReg[key][2] = HAL_GPIO_ReadPin(button_ports[key],button_pins[key]);
+      |                                    ~~~~~~~~~~~~^~~~~
+      |                                                |
+      |                                                int
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:241,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Inc/button.h:7,
+                 from ../Core/Src/button.c:1:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:233:46: note: expected 'GPIO_TypeDef *' {aka 'struct <anonymous> *'} but argument is of type 'int'
+  233 | GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
+      |                                ~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "Lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Ron\tools\STM32 workspace\Lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3.elf
+ 
+arm-none-eabi-size   Lab3.elf 
+arm-none-eabi-objdump -h -S  Lab3.elf  > "Lab3.list"
+arm-none-eabi-objcopy  -O ihex  Lab3.elf  "Lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7368	    120	   1744	   9232	   2410	Lab3.elf
+arm-none-eabi-objcopy  -O binary  Lab3.elf  "Lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab3.hex
+Finished building: Lab3.bin
+Finished building: Lab3.list
+ 
+ 
+ 
+
+01:29:14 Build Finished. 0 errors, 4 warnings. (took 695ms)
+
