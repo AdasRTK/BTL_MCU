@@ -1,0 +1,24 @@
+15:12:07 **** Incremental Build of configuration Debug for project Source ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc "../Core/Src/fsm_manual.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_manual.d" -MT"Core/Src/fsm_manual.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_manual.o"
+arm-none-eabi-gcc -o "Source.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\LAB3\Source\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Source.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Source.elf
+ 
+arm-none-eabi-size   Source.elf 
+arm-none-eabi-objdump -h -S  Source.elf  > "Source.list"
+arm-none-eabi-objcopy  -O ihex  Source.elf  "Source.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9632	    132	   1772	  11536	   2d10	Source.elf
+arm-none-eabi-objcopy  -O binary  Source.elf  "Source.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Source.hex
+Finished building: Source.bin
+ 
+Finished building: Source.list
+ 
+ 
+
+15:12:08 Build Finished. 0 errors, 0 warnings. (took 686ms)
+

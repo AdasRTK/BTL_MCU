@@ -1,0 +1,39 @@
+/*
+ * fsm_manual.c
+ *
+ *  Created on: Oct 30, 2023
+ *      Author: Admin
+ */
+
+#include "fsm_manual.h"
+
+void fsm_manual_run(){
+
+	switch (status) {
+		case MAN_RED:
+			setInitialValue(0,2);
+
+			if(isButtonPressed(1) == 1){
+				status = MAN_YELLOW;
+			}
+			if(isButtonPressed(2) == 1){
+
+			}
+			break;
+		case MAN_YELLOW:
+			setInitialValue(0,3);
+			if(isButtonPressed(1) == 1){
+				status = MAN_GREEN;
+			}
+			break;
+		case MAN_GREEN:
+			setInitialValue(0,2);
+			HAL_GPIO_WritePin(LED_RED_HORI_GPIO_Port, LED_RED_HORI_Pin, RESET);
+			if(isButtonPressed(1) == 1){
+				status = INIT;
+			}
+			break;
+		default:
+			break;
+	}
+}

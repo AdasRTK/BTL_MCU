@@ -1,0 +1,3 @@
+led.c:14:6:updateClockBuffer	4	static
+led.c:20:6:countDown	4	static
+led.c:24:6:setInitialValue	16	static

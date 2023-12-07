@@ -1,0 +1,19 @@
+/*
+ * fsm_automatic.c
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: Admin
+ */
+
+#include "fsm_automatic.h"
+
+void fsm_automatic_run(){
+	switch(status) {
+		case value:
+
+			break;
+		default:
+			break;
+	}
+};
+
